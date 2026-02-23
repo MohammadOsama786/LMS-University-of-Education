@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_variant">#0E44B3</color>
+    <color name="accent">#10B981</color>
+    <color name="text_primary">#111318</color>
+    <color name="text_secondary">#616F89</color>
+    <color name="border_gray">#DBDFE6</color>
+    <color name="input_bg">#F9FAFB</color>
+    <color name="primary">#135BEC</color>
+    <color name="black">#111318</color>
+    <color name="black_60">#99111318</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_light">#F6F6F8</color>
+    <color name="background_dark">#101622</color>
+    <color name="text_grey">#616F89</color>
+    <color name="bg_light">#F6F6F8</color>
+    <color name="divider">#DBDFE6</color>
+    <color name="segment_bg">#E0E0E0</color>
+    <color name="primary_light">#D9E4FF</color>
+    <color name="accent_green">#10B981</color>
+    <color name="gray_border">#E5E7EB</color>
+    <color name="gray_dark_border">#374151</color>
+
+    <color name="colorPrimary">#135BEC</color>
+    <color name="secondary_green">#10B981</color>
+
+    <color name="text_hint">#B0B3B8</color>
+
+    <color name="blue_primary">#1E88E5</color>
+    <color name="gray_light">#9E9E9E</color>
+
+    <color name="nav_background">#FFFFFF</color>
+    <color name="nav_icon_inactive">#9CA3AF</color>
+
+    <color name="border_light">#E0E0E0</color>
+    <color name="profile_bg">#E0EFFF</color>
+    <color name="orange">#FFA500</color>
+    <color name="blue">#3B82F6</color>
+    <color name="purple">#A78BFA</color>
+
+    <color name="orange_primary">#F97316</color>
+    <color name="orange_primary_light">#FBBF93</color>
+    <color name="banner_background">#FFD700</color> <!-- example -->
+
+</resources>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:id="@+id/main">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UniLearn LMS"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bg_logo"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_school"
+                    app:tint="@color/primary" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Access your personalized learning dashboard"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Role -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I am a..."
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+
+
+            <RadioGroup
+                android:id="@+id/roleSegment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_segment"
+                android:padding="4dp">
+
+                <RadioButton
+                    android:id="@+id/rbStudent"
+                    style="@style/SegmentButton1"
+                    android:text="Student"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"/>
+
+                <RadioButton
+                    style="@style/SegmentButton1"
+                    android:text="Teacher"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"/>
+
+                <RadioButton
+                    style="@style/SegmentButton1"
+                    android:text="Admin"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+
+            <!-- Email Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email or University ID"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g. name@university.edu"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Password Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/InputLayout"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Enter your password"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/primary"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Login -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/PrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:text="Login"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_login"
+                app:iconGravity="textEnd"
+                app:iconPadding="8dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="16dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OR CONTINUE WITH"
+                    android:textSize="10sp"
+                    android:layout_marginHorizontal="8dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"/>
+            </LinearLayout>
+
+            <!-- Social -->
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+               >
+
+                <ImageView
+                    android:id="@+id/imageViewGoogle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_social"
+                    android:src="@drawable/ic_google"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="12dp"/>
+
+                <ImageView
+                    android:id="@+id/imageViewIOS"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_social"
+                    android:src="@drawable/ic_apple"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

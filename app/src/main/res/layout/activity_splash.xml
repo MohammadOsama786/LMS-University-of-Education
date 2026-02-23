@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_soft"
+    android:paddingTop="14dp"
+    android:paddingBottom="20dp"
+    tools:context=".ui.splash.SplashActivity">
+
+    <!-- Abstract Decorative Circles (Blurred) -->
+    <mediaplayer.patryk.lms.customView.BlurCircleView
+        android:id="@+id/blurCircleTopRight"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:translationX="40dp"
+        android:translationY="-40dp" />
+
+    <mediaplayer.patryk.lms.customView.BlurCircleView
+        android:id="@+id/blurCircleBottomLeft"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:translationX="-40dp"
+        android:translationY="40dp" />
+
+    <!-- Central Branding Content -->
+    <LinearLayout
+        android:id="@+id/brandingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <!-- Logo Icon -->
+        <FrameLayout
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_logo"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/logoIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_school"
+                app:tint="@color/primary" />
+        </FrameLayout>
+
+        <!-- Brand Name -->
+        <TextView
+            android:id="@+id/tvBrandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UniLearn LMS"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn. Manage. Succeed."
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            android:letterSpacing="0.15"
+            android:gravity="center"
+            android:alpha="0.8"
+            android:textAllCaps="true" />
+    </LinearLayout>
+
+    <!-- Footer / Progress Area -->
+    <LinearLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:layout_marginBottom="32dp"
+       >
+
+        <!-- Loading Feedback -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preparing your classroom..."
+                android:textSize="14sp"
+                android:textColor="@color/black_60"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="8dp"
+                android:progressDrawable="@drawable/progress_primary"
+                android:progress="33"
+                android:indeterminate="false" />
+        </LinearLayout>
+
+        <!-- Developer Attribution -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:alpha="0.4">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_verified_user"
+                app:tint="@color/black_60" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secure Education Platform"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/black_60"
+                android:textAllCaps="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
